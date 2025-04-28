@@ -1,41 +1,45 @@
-# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+# Ignore node_modules for both client and server
+/node_modules/
 
-# dependencies
-/node_modules
-/.pnp
-.pnp.*
-.yarn/*
-!.yarn/patches
-!.yarn/plugins
-!.yarn/releases
-!.yarn/versions
-
-# testing
-/coverage
-
-# next.js
+# Ignore build output
 /.next/
-/out/
+/build/
+/dist/
 
-# production
-/build
+# Ignore log files
+*.log
 
-# misc
+# Ignore environment files
+.env
+.env.local
+.env.development
+.env.production
+.env.test
+
+# Ignore IDE files
+/.idea/
+/.vscode/
+
+# Ignore OS-specific files
 .DS_Store
-*.pem
+Thumbs.db
 
-# debug
+# Ignore npm-debug.log files
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-.pnpm-debug.log*
 
-# env files (can opt-in for committing if needed)
-.env*
+# Ignore package-lock.json or yarn.lock (if you don't want them tracked)
+# package-lock.json
+# yarn.lock
 
-# vercel
-.vercel
+# Ignore test coverage output
+/coverage/
 
-# typescript
-*.tsbuildinfo
-next-env.d.ts
+# Ignore the server's specific files (if applicable)
+server/**/*.log
+server/node_modules/
+
+# Ignore any temporary files or directories
+*.swp
+*.swo
